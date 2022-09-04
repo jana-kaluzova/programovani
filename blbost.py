@@ -1,4 +1,7 @@
-seznam = ['jahoda', 'boruvka', 'kiwi', 'banan']
+with open ("seznam.txt") as soubor:
+    seznam = soubor.read ()
+
+seznam= seznam[:-1].split("\n")
 while True:
     noveslovo= input ("zadej prikaz\n")
     if noveslovo[0]=="+":
@@ -19,5 +22,8 @@ while True:
         else:
             print ("je v seznamu")
     elif noveslovo=="konec":
+        with open('seznam.txt', mode='w') as soubor:
+            for polozka in seznam:
+                print (polozka, file=soubor)
         break
     print (seznam)
