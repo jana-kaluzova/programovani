@@ -1,0 +1,4 @@
+tvojejmeno= input ("Jak se jmenujes?\n")
+with open ("svatky.txt") as soubor:
+    svatky= svatky.read ()
+    for radek in soubor:
